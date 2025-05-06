@@ -1,0 +1,41 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\title{A Simple Academic Template}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This is a simple academic template to test the LaTeX compilation in Docker. It includes basic academic elements like equations, references, and sections.
+\end{abstract}
+
+\section{Introduction}
+This is a test document to verify that the LaTeX environment is working correctly. The document includes various LaTeX features to ensure all necessary packages are properly installed.
+
+\section{Mathematical Content}
+Here is a simple equation:
+\begin{equation}
+    E = mc^2
+\end{equation}
+
+And an inline equation: \( f(x) = x^2 \).
+
+\section{References}
+This is a citation example \cite{example}.
+
+\begin{thebibliography}{9}
+\bibitem{example} 
+Example Reference. 
+\textit{Journal of Examples}, 2024.
+\end{thebibliography}
+
+\end{document} 
