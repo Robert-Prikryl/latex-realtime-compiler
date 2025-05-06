@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  latex:
+    # Use this to pull the pre-built image from Docker Hub
+    image: robertprikryl/latex-realtime-compiler:latest 
+    # Uncomment this and comment out 'image:' to build locally from Dockerfile
+    #build: . 
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./workspace:/workspace
+    environment:
+      - TZ=Europe/Prague
+    command: >
+      bash -c "latexmk -pvc -pdf -interaction=nonstopmode main.tex & live-server --port=8080 --no-browser" 
