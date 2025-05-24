@@ -13,4 +13,4 @@ services:
     environment:
       - TZ=Europe/Prague
     command: >
-      bash -c "latexmk -pvc -pdf -interaction=nonstopmode main.tex & live-server --port=8080 --no-browser" 
+      bash -c "latexmk -pvc -pdf -interaction=nonstopmode -bibtex main.tex & live-server --port=8080 --no-browser"
